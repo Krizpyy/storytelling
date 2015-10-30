@@ -14,20 +14,39 @@
 
   //only use this function if you need to load images
   //remember you will need to use Anvil to run your local server
-	// function preload(){
-
-	// }
-
+	
+	var marbles = 4
+	var shade = "blue";
 
 	//Set up your canvas
 	function setup() {
 		createCanvas(windowWidth, windowHeight);
+		shade = color(random(255), random(255), random(255));
 
 	}
-
-
-	//Draw your story
+//Draw your story
 	function draw() {
+		background("White");
+		drawMarbles();
+
+	}
+	function drawMarbles() {
+		fill(shade);
+		noStroke();
+
+		if(marbles == 1){
+			ellipse(300, 400, 260, 260);
+		}	else if (marbles == 4){
+			ellipse(300, 400, 260, 260);
+			ellipse(300, 400, 260, 260);
+			ellipse(300, 400, 260, 260);
+			ellipse(300, 400, 260, 260);
+		}
+
+		
+
+
+
 
 	}
 
